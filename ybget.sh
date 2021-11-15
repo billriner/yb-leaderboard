@@ -76,6 +76,11 @@ curl $URL >& /dev/null | awk -F, '
 
         rank = $1
         name = $2
+        
+        timedate = $4
+        split($5,a," ")
+        date = a[1]
+        time = a[2]
 
         lat = $5
         lat = substr($5, 1, length($5)-1)
@@ -95,6 +100,7 @@ curl $URL >& /dev/null | awk -F, '
         if (ew == "W") lon = -lon
 
         printf "  <Placemark>\n"
+        printf "    <description>%s-%s</description>", date, time
         printf "    <name>%s</name>\n", name
         printf "    <Point>\n"
         printf "      <coordinates>%s,%s,0.0</coordinates>\n", lon, lat
