@@ -78,9 +78,9 @@ curl $URL >& /dev/null | awk -F, '
         name = $2
         
         timedate = $4
-        split($5,t," ")
-        date = t[1]
-        time = t[2]
+        split($4,a," ")
+        date = a[1]
+        time = a[2]
 
         lat = $5
         lat = substr($5, 1, length($5)-1)
