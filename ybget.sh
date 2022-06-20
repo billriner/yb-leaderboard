@@ -1,8 +1,15 @@
 #!/usr/bin/env zsh
 
-# ypget.sh - Get tracking data from Yellowbrick and create a KML file for Google Earth
+#*******************************************************************************
+#
+# ypget.sh - Get tracking data from Yellowbrick and create a KML file for 
+#            Google Earth
+#
 #            Developer: Bill Riner
+#
+#********************************************************************************
 
+# Web address for section text leaderboard
 URL='https://yb.tl/l/chicagomac2021?class=section07'
 
 # Example Yellowbrick text leaderboard file:
@@ -14,6 +21,7 @@ URL='https://yb.tl/l/chicagomac2021?class=section07'
 # :
 # RTD,Pandora,1.046,20/07/2021 00:45:49,045 50.780N,084 37.138W,160,0.2,1.4,203.3
 
+# Columns
 # 1. Rank
 # 2. Team
 # 3. TCF
@@ -25,6 +33,7 @@ URL='https://yb.tl/l/chicagomac2021?class=section07'
 # 9. VMG so far (knots)
 # 10. DTF (nm)
 
+# KML template
 # <?xml version="1.0" encoding="UTF-8"?>
 #<kml xmlns="http://www.opengis.net/kml/2.2">
 #
