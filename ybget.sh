@@ -10,7 +10,8 @@
 #********************************************************************************
 
 # Web address for section text leaderboard
-URL='https://yb.tl/l/chicagomac2021?class=section07'
+IP=178.79.175.12
+URL=https://$IP/l/chicagomac2021?class=section07
 
 # Example Yellowbrick text leaderboard file:
 # THESE RESULTS ARE PREDICTED OR PROVISIONAL - Refer to race website for official results!
@@ -53,7 +54,7 @@ URL='https://yb.tl/l/chicagomac2021?class=section07'
 
 # Save the leaderboard text file
 DATE=`date | sed 's/ /-/g'`
-curl -o $DATE.txt $URL
+curl --insecure -o $DATE.txt $URL
 
 cat $DATE.txt | awk -F, > $DATE.kml '
 
