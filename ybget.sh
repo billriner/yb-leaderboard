@@ -51,7 +51,11 @@ URL='https://yb.tl/l/chicagomac2021?class=section07'
 
 # Get the current tracking data and write a KML file
 
-curl $URL >& /dev/null | awk -F, '
+# Save the leaderboard text file
+DATE=`date | sed 's/ /-/g'`
+curl -o $DATE.txt $URL
+
+cat $DATE.txt | awk -F, > $DATE.kml '
 
     BEGIN {
         # Write KML header
