@@ -11,7 +11,7 @@
 
 # Web address for section text leaderboard
 IP=178.79.175.12
-URL=https://$IP/l/chicagomac2021?class=section07
+URL=https://$IP/l/chicagomac2022?class=section07
 
 # Example Yellowbrick text leaderboard file:
 # THESE RESULTS ARE PREDICTED OR PROVISIONAL - Refer to race website for official results!
